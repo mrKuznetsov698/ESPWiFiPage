@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Config</title>
+        <style>
+            body{
+                background-color: black;
+            }
+            input[type="text"] {
+                margin-bottom: 8px;
+                font-size: 20px;
+            }
+
+            input[type="submit"] {
+                width: 180px;
+                height: 40px;
+                margin-bottom: 8px;
+                font-size: 20px;
+            }
+            hr[class="oth"]{
+                width: 80%;
+            }
+            .title{
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1 class="title">ESP Config</h1>
+            <hr>
+            <h2 class="title">Connect to Wi-Fi network</h2>
+            <form action="/connect" method="POST">
+                <input type="text" name="ssid" placeholder="SSID">
+                <br>
+                <input type="password" name="pass" placeholder="Pass">
+                <br>
+                <input type="submit" value="Connect">
+            </form>
+            <hr class="oth">
+            <h2 class="title">Access point</h2>
+            <form action="/ap" method="POST">
+                <input type="text" name="ssid" placeholder="SSID">
+                <br>
+                <input type="password" name="pass" placeholder="Pass">
+                <br>
+                <input type="submit" value="Open hotspot">
+            </form>
+        </center>
+    </body>
+</html>
